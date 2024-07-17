@@ -1,0 +1,105 @@
+import { useEffect, useState } from "react";
+import Accordion from 'react-bootstrap/Accordion';
+import check_mark from '../../images/Check.png';
+import "./About.css"
+
+export function About() {
+    const [email, setEmail] = useState('');
+
+    const handleInputChange = (e) => {
+        setEmail(e.target.value);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Форма отправлена:', email)
+        alert('Спасибо за подписку!')
+        setEmail('');
+    };
+
+    return (
+        <>
+            <div className="about_company">
+                <h1>О компании</h1>
+                <p>Мы представляем в зале большее количество техники и вы можете оценить функциональность всех устройств.</p>
+            </div>
+
+            <section className="advantages">
+                <div className="advantages__inner">
+                    <h1>Наши Преимущества</h1>
+                    <div className="advantages__list">
+                        <div className="advantage">
+                            <img className='advantage_img' src={check_mark} alt="" />
+                            <h2>Преимущество 1</h2>
+                            <p>Высокое качество продукции и сервисное обслуживание.</p>
+                        </div>
+                        <div className="advantage">
+                            <img className='advantage_img' src={check_mark} alt="" />
+                            <h2>Преимущество 2</h2>
+                            <p>Конкурентоспособные цены на весь ассортимент.</p>
+                        </div>
+                        <div className="advantage">
+                            <img className='advantage_img' src={check_mark} alt="" />
+                            <h2>Преимущество 3</h2>
+                            <p>Быстрая доставка по всей стране.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <Accordion>
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>Accordion Item #1</Accordion.Header>
+                    <Accordion.Body>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                    <Accordion.Header>Accordion Item #2</Accordion.Header>
+                    <Accordion.Body>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="2">
+                    <Accordion.Header>Accordion Item #3</Accordion.Header>
+                    <Accordion.Body>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+
+            <section className="newsletter">
+                <div className="newsletter_inner">
+                    <form className='form' action="" onSubmit={handleSubmit}>
+                        <h1>Оставайтесь с нами на связи!</h1>
+                        <div className="newsletter-form">
+                            <div className="form_email">
+                                <input className='form-email' value={email} onChange={handleInputChange} type="email" placeholder='Ваш e-mail' style={{ color: email ? 'black' : '#797979' }}/>
+                                <p>Подписываясь на рассылку, вы соглашаетесь с <u>условиями оферты</u> и <u>политикой конфиденциальности</u></p>
+                            </div>
+                            <input className='form-send' type="submit" value="Отправить" />
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </>
+    )
+}

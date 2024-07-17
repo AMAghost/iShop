@@ -1,0 +1,128 @@
+.advantages {
+    padding: 40px 0;
+    margin-bottom: 48px;
+}
+
+.advantages__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantages h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.advantages__inner>h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.advantages__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.advantage {
+    text-align: center;
+    flex: 0 1 30%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.advantage h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.advantage_img {
+    height: 90px;
+}
+
+.newsletter {
+    margin: 80px 0;
+}
+
+.newsletter_inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 45px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-email {
+    padding: 0 30px;
+    width: 400px;
+    height: 75px;
+    background-color: #d9d9d9;
+    color: #797979;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.form_email {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form_email>p {
+    width: 400px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.form-send {
+    width: 200px;
+    height: 75px;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.about_company {
+    margin: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.about_company>p {
+    color: #797979;
+    max-width: 500px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white !important;
+    background-color: black !important;
+    border: 0 !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    fill: white;
+}
+
