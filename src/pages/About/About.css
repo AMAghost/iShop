@@ -116,13 +116,5 @@ h1 {
     text-align: center;
 }
 
-.accordion-button:not(.collapsed) {
-    color: white !important;
-    background-color: black !important;
-    border: 0 !important;
-}
 
-.accordion-button:not(.collapsed)::after {
-    fill: white;
-}
 
